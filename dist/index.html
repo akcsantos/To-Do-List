@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List</title>
+<script defer src="main.js"></script></head>
+<body>
+    <div class="mainWrapper">
+        <div class="leftWrapper">
+            <div class="greetingUser">Hello, Username!</div>
+            <div id="addTaskButton">Add tasks</div>
+            <div id="projectsButton">Projects</div>
+            <div id="choresButton">Chores</div>
+        </div>
+        <div id="rightWrapper"></div>
+    </div>
+
+
+    <dialog>
+        <form method="dialog" class="addTask">
+            <label for ="taskTitle">Task Name:</label>
+            <input type="text" id="taskTitle" name="taskTitle" placeholder="Dishes">
+            <label for ="description">Description:</label>
+            <input type="text" id="description" name="description" placeholder="Go wash the dishes">
+            <label for ="projectName">Task Name:</label>
+            <select name="projectName" id="projectName">
+                <option disabled selected value style="display: none;"> -- select an option --</option>
+                <option value="projects" id="project">Projects</option>
+                <option value="chores" id="chores">Chores</option>
+            </select>
+            <label for ="dueDate">Due Date:</label>
+            <input type="date" id="dueDate" name="dueDate">
+            <label for ="priority">Priority:</label>
+            <select name="priority" id="priority">
+                <option disabled selected value style="display: none;"> -- select an option --</option>
+                <option value="High">High</option>
+                <option value="Medium">Medium</option>
+                <option value="Low">Low</option>
+            </select>
+            <button type="submit" id="confirmButton">Confirm</button>
+            <button type="reset" id="resetButton">Reset</button>
+            <button type="close" id="closeButton">Close</button>
+
+        </form>
+    </dialog>
+</body>
+</html>
